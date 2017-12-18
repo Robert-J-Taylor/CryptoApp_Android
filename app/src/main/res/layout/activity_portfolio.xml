@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="roberttaylor.cproject.Portfolio">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/label_default_text"
+        android:id="@+id/priceLabel"
+        android:textSize="45sp"
+        android:textStyle="bold"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"/>
+
+    <Button
+        android:id="@+id/findPriceButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="340dp"
+        android:layout_marginTop="62dp"
+        android:text="Click Test"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/priceLabel"/>
+</android.support.constraint.ConstraintLayout>

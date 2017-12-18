@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="roberttaylor.cproject.Exchanges"
+    tools:showIn="@layout/activity_exchanges">
+
+    <RelativeLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="-55dp"
+        android:padding="25dp"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_constraintLeft_creator="1"
+        tools:layout_constraintRight_creator="1"
+        tools:layout_constraintTop_creator="1">
+
+        <CheckBox
+            android:id="@+id/checkboxBitFinex"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="onCheckboxClicked"
+            android:text="@string/checkboxBitFinex"/>
+
+        <CheckBox
+            android:id="@+id/checkboxBitStamp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/checkboxBitFinex"
+            android:onClick="onCheckboxClicked"
+            android:text="@string/checkboxBitStamp"/>
+
+        <CheckBox
+            android:id="@+id/checkboxCoinBase"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/checkboxBitStamp"
+            android:onClick="onCheckboxClicked"
+            android:text="@string/checkboxCoinBase"/>
+
+        <CheckBox
+            android:id="@+id/checkboxBTCe"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/checkboxCoinBase"
+            android:onClick="onCheckboxClicked"
+            android:text="@string/checkboxBTCe"/>
+
+        <CheckBox
+            android:id="@+id/checkboxKraken"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/checkboxBTCe"
+            android:onClick="onCheckboxClicked"
+            android:text="@string/checkboxKraken"/>
+
+        <CheckBox
+            android:id="@+id/checkboxBTCChina"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/checkboxKraken"
+            android:onClick="onCheckboxClicked"
+            android:text="@string/checkboxBTCChina"/>
+
+        <CheckBox
+            android:id="@+id/checkboxBitCoinSource"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/checkboxBTCChina"
+            android:onClick="onCheckboxClicked"
+            android:text="@string/checkboxBitCoinSource"/>
+
+    </RelativeLayout>
+</android.support.constraint.ConstraintLayout>

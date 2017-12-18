@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="roberttaylor.cproject.Alerts"
+    tools:layout_editor_absoluteX="0dp"
+    tools:layout_editor_absoluteY="81dp"
+    tools:showIn="@layout/activity_alerts">
+
+    <android.support.v7.widget.SwitchCompat
+        android:id="@+id/advancedNewAlertsSwitch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="25dp"
+        android:checked="false"
+        android:theme="@style/alertSwitch"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/advancedSellOffSwitch"
+        tools:layout_constraintRight_creator="1"
+        tools:layout_constraintTop_creator="1"
+        />
+
+    <android.support.v7.widget.SwitchCompat
+        android:id="@+id/advancedSellOffSwitch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="19dp"
+        android:checked="false"
+        android:theme="@style/alertSwitch"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/advancedCoinDropSwitch"
+        tools:layout_constraintRight_creator="1"
+        tools:layout_constraintTop_creator="1"
+        />
+
+    <android.support.v7.widget.SwitchCompat
+        android:id="@+id/advancedCoinDropSwitch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="71dp"
+        android:layout_marginTop="70dp"
+        android:checked="false"
+        android:theme="@style/alertSwitch"
+        app:layout_constraintBottom_toTopOf="@+id/advancedNewsAlerts"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/advancedAlertsTitle"
+        tools:layout_constraintBottom_creator="1"
+        tools:layout_constraintRight_creator="1"
+        />
+
+    <android.support.v7.widget.SwitchCompat
+        android:id="@+id/newsAlertSwitch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="26dp"
+        android:checked="false"
+        android:theme="@style/alertSwitch"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/sellOffSwitch"
+        tools:layout_constraintRight_creator="1"
+        tools:layout_constraintTop_creator="1"
+        />
+
+    <android.support.v7.widget.SwitchCompat
+        android:id="@+id/sellOffSwitch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="23dp"
+        android:checked="false"
+        android:theme="@style/alertSwitch"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/coinDropSwitch"
+        tools:layout_constraintRight_creator="1"
+        tools:layout_constraintTop_creator="1"
+        />
+
+    <android.support.v7.widget.SwitchCompat
+        android:id="@+id/coinDropSwitch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="53dp"
+        android:checked="false"
+        android:theme="@style/alertSwitch"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_constraintRight_creator="1"
+        tools:layout_constraintTop_creator="1"
+        />
+
+    <TextView
+        android:id="@+id/coinDrop"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="53dp"
+        android:text="@string/coinDrop"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_constraintBottom_creator="1"
+        tools:layout_constraintLeft_creator="1"
+        tools:layout_constraintTop_creator="1"
+        />
+
+    <TextView
+        android:id="@+id/sellOff"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="31dp"
+        android:text="@string/sellOff"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/coinDrop"
+        tools:layout_constraintLeft_creator="1"
+        tools:layout_constraintTop_creator="1"
+        />
+
+    <TextView
+        android:id="@+id/newsAlert"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="34dp"
+        android:text="@string/newsAlert"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/sellOff"
+        tools:layout_constraintLeft_creator="1"
+        tools:layout_constraintTop_creator="1"
+        />
+
+    <TextView
+        android:id="@+id/advancedAlertsTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="44dp"
+        android:layout_marginStart="15dp"
+        android:text="@string/advancedAlertsTitle"
+        android:textSize="25dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/advancedCoinDrop"
+        app:layout_constraintStart_toEndOf="@+id/newsAlert"
+        tools:layout_constraintBottom_creator="1"
+        tools:layout_constraintLeft_creator="1"
+        />
+
+    <TextView
+        android:id="@+id/advancedCoinDrop"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="194dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="195dp"
+        android:text="@string/advancedCoinDrop"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/sellOff"
+        tools:layout_constraintBottom_creator="1"
+        tools:layout_constraintLeft_creator="1"
+        tools:layout_constraintTop_creator="1"
+        />
+
+    <TextView
+        android:id="@+id/advancedSellOff"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="27dp"
+        android:text="@string/advancedSellOff"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/advancedCoinDrop"
+        tools:layout_constraintLeft_creator="1"
+        tools:layout_constraintTop_creator="1"
+        />
+
+    <TextView
+        android:id="@+id/advancedNewsAlerts"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="25dp"
+        android:text="@string/advancedNewsAlerts"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/advancedSellOff"
+        tools:layout_constraintLeft_creator="1"
+        tools:layout_constraintTop_creator="1"
+        />
+
+
+</android.support.constraint.ConstraintLayout>
+
+
+
+
+
+
+
+    <!--<?xml version="1.0" encoding="utf-8"?>-->
+<!--<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"-->
+              <!--android:orientation="vertical"-->
+              <!--android:layout_width="match_parent"-->
+              <!--android:layout_height="match_parent">-->
+
+<!--</LinearLayout>-->

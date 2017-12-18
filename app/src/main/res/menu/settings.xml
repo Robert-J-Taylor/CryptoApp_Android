@@ -1,0 +1,15 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+      xmlns:tools="http://schemas.android.com/tools"
+      xmlns:candlestick="http://schemas.android.com/apk/res-auto"
+      xmlns:app="http://schemas.android.com/apk/res-auto"
+      tools:context="com.siristechnology.candlestick.AddRemoveStockActivity" >
+
+    <item
+        android:id="@+id/ic_action_settings_stock_add"
+        android:icon="@android:drawable/ic_input_add"
+        android:title="@string/action_setings_stock_add"/>
+        <!--app:showAsAction="always"-->
+        <!--candlestick:showAsAction="ifRoom" -->
+        />
+
+</menu>

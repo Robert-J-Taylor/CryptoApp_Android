@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="roberttaylor.cproject.Settings"
+    tools:layout_editor_absoluteY="81dp"
+    tools:layout_editor_absoluteX="0dp">
+
+    <TextView android:id="@+id/settingsProfile"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:text="@string/settingsProfile"
+              android:layout_below="@+id/settingsTitle"
+              android:layout_marginStart="43dp"
+              tools:layout_constraintTop_creator="1"
+              android:layout_marginTop="85dp"
+              tools:layout_constraintLeft_creator="1"
+              app:layout_constraintLeft_toLeftOf="parent"
+              app:layout_constraintTop_toTopOf="parent"
+              android:layout_marginLeft="43dp"/>
+
+        <TextView android:id="@+id/settingsNotifications"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:text="@string/settingsNotifications"
+                  android:layout_below="@+id/settingsProfile"
+                  android:layout_marginStart="43dp"
+                  tools:layout_constraintTop_creator="1"
+                  android:layout_marginTop="32dp"
+                  app:layout_constraintTop_toBottomOf="@+id/settingsWallet"
+                  tools:layout_constraintLeft_creator="1"
+                  app:layout_constraintLeft_toLeftOf="parent"
+                  android:layout_marginLeft="43dp"/>
+
+        <TextView android:id="@+id/settingsWallet"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:text="@string/settingsWallet"
+                  android:layout_below="@+id/settingsNotifications"
+                  android:layout_marginStart="43dp"
+                  tools:layout_constraintTop_creator="1"
+                  android:layout_marginTop="33dp"
+                  app:layout_constraintTop_toBottomOf="@+id/settingsProfile"
+                  tools:layout_constraintLeft_creator="1"
+                  app:layout_constraintLeft_toLeftOf="parent"
+                  android:layout_marginLeft="43dp"/>
+
+    <TextView
+        android:id="@+id/alertSettings"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/alertSettings"
+        android:layout_marginStart="43dp"
+        tools:layout_constraintTop_creator="1"
+        android:layout_marginTop="31dp"
+        app:layout_constraintTop_toBottomOf="@+id/settingsNotifications"
+        tools:layout_constraintLeft_creator="1"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginLeft="43dp"/>
+
+    <TextView
+        android:id="@+id/paymentTransferSettings"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/payTransferSettings"
+        tools:layout_constraintTop_creator="1"
+        android:layout_marginTop="27dp"
+        app:layout_constraintTop_toBottomOf="@+id/alertSettings"
+        tools:layout_constraintLeft_creator="1"
+        app:layout_constraintLeft_toLeftOf="@+id/alertSettings"/>
+</android.support.constraint.ConstraintLayout>

@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          package="roberttaylor.cproject">
+<uses-permission android:name="android.permission.INTERNET"/>
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppMaterialTheme">
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ChartActivity"
+            android:label="@string/app_name"
+            >
+        </activity>
+        <activity
+            android:name=".AddRemoveStockActivity"
+            android:label="@string/title_activity_addRemoveStockActivity"
+            android:theme="@style/Theme.AppCompat.Light"
+            android:parentActivityName=".ChartActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="MainActivity" />
+        </activity>
+        <activity
+            android:name=".Register"
+            android:label="@string/titleSignUp">
+        </activity>
+        <activity
+            android:name=".Exchanges"
+            android:label="@string/titleExchanges"
+            android:theme="@style/AppMaterialTheme">
+        </activity>
+        <activity
+            android:name=".APIKeySettings"
+            android:label="@string/titleAPIKeySettings">
+        </activity>
+        <activity
+            android:name=".UserAgreement"
+            android:label="@string/titleUserAgreement">
+        </activity>
+        <activity
+            android:name=".ViewCoinList"
+            android:label="@string/titleViewCoins"
+            android:theme="@style/CoinListViewTheme">
+        </activity>
+        <activity
+            android:name=".Settings"
+            android:label="@string/titleSettings">
+        </activity>
+        <activity
+            android:name=".UserProfile"
+            android:label="@string/titleUpdateProfile">
+        </activity>
+        <activity
+            android:name=".Alerts"
+            android:label="@string/titleAlerts">
+        </activity>
+        <activity android:name=".Notifications">
+        </activity>
+        <activity
+            android:name=".Payment"
+            android:label="@string/titlePayment"
+            android:theme="@style/AppMaterialTheme">
+        </activity>
+        <activity
+            android:name=".SearchUsers"
+            android:label="@string/titleSearchUsers"
+            android:theme="@style/AppMaterialTheme">
+        </activity>
+        <activity
+            android:name=".FollowedUsers"
+            android:label="@string/followedUsers"
+            android:theme="@style/AppMaterialTheme">
+        </activity>
+        <activity
+            android:name=".QRCode"
+            android:label="@string/titleQRCode">
+        </activity>
+        <activity android:name=".Portfolio">
+        </activity>
+    </application>
+
+</manifest>

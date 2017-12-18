@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--<LinearLayout-->
+    <!--xmlns:android="http://schemas.android.com/apk/res/android"-->
+    <!--xmlns:app="http://schemas.android.com/apk/res-auto"-->
+    <!--xmlns:tools="http://schemas.android.com/tools"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="match_parent"-->
+    <!--tools:context="roberttaylor.cproject.Payment">-->
+
+    <!--<RelativeLayout-->
+        <!--xmlns:android="http://schemas.android.com/apk/res/android"-->
+        <!--xmlns:app="http://schemas.android.com/apk/res-auto"-->
+        <!--xmlns:tools="http://schemas.android.com/tools"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent"-->
+        <!--tools:context="roberttaylor.cproject.Payment">-->
+
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="roberttaylor.cproject.Payment"
+    tools:layout_editor_absoluteY="81dp">
+
+    <Spinner
+        android:id="@+id/selectWalletSpinner"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="43dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="19dp"
+        android:entries="@array/walletArray"
+        android:prompt="@string/selectWalletPrompt"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toStartOf="@+id/qrCode"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/qrCode"
+        />
+
+    <EditText
+        android:id="@+id/editText"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="22dp"
+        android:layout_marginStart="16dp"
+        android:editable="true"
+        android:enabled="true"
+        android:focusable="true"
+        android:hint="@string/hintUIC"
+        android:inputType="textMultiLine"
+        android:isScrollContainer="true"
+        android:maxLines="1"
+        android:minLines="1"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toTopOf="@+id/quoteTextArea"
+        app:layout_constraintStart_toStartOf="@+id/quoteTextArea"
+        app:layout_constraintTop_toBottomOf="@+id/selectUserSpinner"
+        />
+
+    <EditText
+        android:id="@+id/quoteTextArea"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="23dp"
+        android:layout_marginEnd="34dp"
+        android:layout_marginStart="34dp"
+        android:background="@drawable/basic_border_background"
+        android:editable="true"
+        android:ems="10"
+        android:enabled="true"
+        android:focusable="true"
+        android:gravity="top"
+        android:hint="Notes"
+        android:inputType="textMultiLine"
+        android:isScrollContainer="true"
+        android:maxLines="6"
+        android:minLines="6"
+        android:padding="24dp"
+        android:textIsSelectable="true"
+        app:layout_constraintBottom_toTopOf="@+id/completeTransaction"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editText"
+        />
+
+    <Spinner
+        android:id="@+id/selectUserSpinner"
+        android:layout_width="170dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="30dp"
+        android:entries="@array/userArray"
+        android:prompt="@string/selectUserPrompt"
+        app:layout_constraintBottom_toTopOf="@+id/editText"
+        app:layout_constraintStart_toStartOf="@+id/editText"
+        app:layout_constraintTop_toBottomOf="@+id/qrCode"
+        />
+
+    <ImageView
+        android:id="@+id/qrCode"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginBottom="44dp"
+        android:layout_marginEnd="13dp"
+        android:layout_marginTop="80dp"
+        android:layout_toEndOf="@+id/selectWalletSpinner"
+        android:layout_toRightOf="@+id/selectWalletSpinner"
+        android:contentDescription="@string/describeQrCode"
+        app:layout_constraintBottom_toTopOf="@+id/selectUserSpinner"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/selectWalletSpinner"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/qr_code_image"
+        />
+
+    <Button
+        android:id="@+id/completeTransaction"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="5dp"
+        android:background="@android:color/black"
+        android:text="@string/completeTransaction"
+        android:textColor="@android:color/white"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/quoteTextArea"
+        />
+</android.support.constraint.ConstraintLayout>
+<!--</RelativeLayout>-->
+
+<!--</LinearLayout>-->

@@ -1,0 +1,157 @@
+<resources>
+    <string name="app_name">CProject</string>
+    <string name="originalSignInButton">Sign In</string>
+    <string name="originalRegisterButton">Register</string>
+    <string name="existingMember">Already a member?</string>
+    <string name="newUser">New user?</string>
+    <string name="registerTitle">Register</string>
+    <string name="hintConfirmPassword">Confirm Password</string>
+    <string name="hintPassword">Enter New Password</string>
+    <string name="hintUserName">Enter Username</string>
+    <string name="hintCurrencySelection">Selection A Currency</string>
+    <string name="save_userProfile">Submit Profile</string>
+    <string name="saveUserProfile">Save Profile</string>
+    <string name="hintLocation">Select Your Location</string>
+    <string name="addImage">Add Your Image +</string>
+    <string name="title_activity_exchanges">Exchanges</string>
+    <string name="bitfinex">BITFINEX</string>
+    <string name="checkboxBitFinex">BITFINEX</string>
+    <string name="checkboxBitStamp">BITSTAMP</string>
+    <string name="checkboxCoinBase">COINBASE</string>
+    <string name="checkboxBTCe">BTC-e</string>
+    <string name="Kraken">KRAKEN</string>
+    <string name="checkboxKraken">KRAKEN</string>
+    <string name="checkboxBTCChina">BTCChina</string>
+    <string name="checkboxBitCoinSource">BITCOIN SOURCE</string>
+    <string name="selectExchangesTitle">Select Your Exchanges</string>
+    <string name="saveAPISettings">Save Changes</string>
+    <string name="titleAPISettings">Add Your Wallets(API Keys)</string>
+    <string name="title_activity_list_wallets">ListWallets</string>
+    <string name="walletsTitle">Add Your Wallets (API Keys)</string>
+    <string name="userAgreementTitle">USER AGREEMENT</string>
+    <string name="checkboxUserAgreement">Accept User Agreement?</string>
+    <string name="accountSettings">Settings</string>
+    <string name="settingsTitle">Settings</string>
+    <string name="settingsProfile">Profile</string>
+    <string name="settingsNotifications">Notifications</string>
+    <string name="settingsWallet">API Key (Wallet)</string>
+    <string name="completeRegistration">Finish Registration</string>
+    <string name="signInTitle">Sign-In</string>
+    <string name="signInUserName">Enter Your UserName</string>
+    <string name="signInPassword">Enter Your Password</string>
+    <string name="signInButton">Continue</string>
+    <string name="registerLink">New Users Sign Up</string>
+    <string name="coinViewTitle">Coin List</string>
+    <string name="coinDrop">Alerted on coin drop</string>
+    <string name="sellOff">Alerted Sell Off</string>
+    <string name="newsAlert">News Alert</string>
+    <string name="advancedCoinDrop">Alerted on coin drop</string>
+    <string name="advancedSellOff">Alerted Sell Off</string>
+    <string name="selectAlertTitle">Select Your Alerts</string>
+    <string name="advancedAlertsTitle">Advanced Alerts</string>
+    <string name="advancedNewsAlerts">News Alerts</string>
+    <string name="listCoinBTC">BTC</string>
+    <string name="listCoinETH">ETH</string>
+    <string name="volumeBTC">Volume: 20 million</string>
+    <string name="volumeETH">Volume: 13 Million</string>
+    <string name="ETHVolume">Volume: 13 Million</string>
+    <string name="listCoinLTC">LTC</string>
+    <string name="volumeLTC">Volume 500 Thousand</string>
+    <string name="listCoinLTCnew">LTC</string>
+    <string name="addCoin">Add Coin</string>
+    <string name="coinListTitle">Coin List</string>
+    <string name="alertSettings">Alerts</string>
+    <string name="payTransferSettings">Payment / Transfer Coins</string>
+    <string name="updateProfileTitle">Update Profile</string>
+    <string name="updateUserProfile">Save Changes</string>
+    <string name="profileName">Name:</string>
+    <string name="profileLocation">Location:</string>
+    <string name="profileCurrency">Currency:</string>
+    <string name="profilePublic">Profile Public</string>
+    <string name="titleExchanges">Select Your Exchanges</string>
+    <string name="titleSignUp">Sign Up</string>
+    <string name="titleUserAgreement">User Agreement</string>
+    <string name="titleViewCoins">Coin List</string>
+    <string name="titleSettings">Settings</string>
+    <string name="titleAlerts">Select Your Alerts</string>
+    <string name="userWalletsTitle">Scan Wallet QR Code</string>
+    <string name="titleAPIKeySettings">API Key Settings</string>
+    <string name="titleUpdateProfile">Profile</string>
+    <string name="listWalletsTitle">Add Your Wallets (API Keys)</string>
+    <string name="walletListTitle">Wallet</string>
+    <string name="etheriumWallet">Ethereum wallet</string>
+    <string name="bitcoinWallet">BitCoin wallet</string>
+    <string name="saveChangesWalletList">Save Changes</string>
+    <string name="drawer_item_embedded_drawer">test</string>
+    <string name="drawer_item_first">1</string>
+    <string name="drawer_item_second">2</string>
+    <string name="drawer_item_third">3</string>
+    <string name="drawer_item_fourth">4</string>
+    <string name="drawer_item_fifth">5</string>
+    <string name="drawer_item_sixth">6</string>
+    <string name="drawer_item_seventh">7</string>
+    <string name="title_activity_notifications">Notifications</string>
+
+    <string name="title_section1">Section 1</string>
+    <string name="title_section2">Section 2</string>
+    <string name="title_section3">Section 3</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_example">Example action</string>
+    <string name="title_activity_user_notifications">userNotifications</string>
+
+
+    <string name="action_settings">Settings</string>
+    <string name="drawer_open">Open</string>
+    <string name="drawer_close">Close</string>
+    <string name="titlePayment">Payment or Transfer</string>
+    <string name="selectWalletPrompt">Select A Wallet</string>
+    <string name="selectUserPrompt">Select A User</string>
+    <string name="describeQrCode">Scan Your Wallet</string>
+    <string name="hintUIC">Type in user UIC</string>
+    <string name="completeTransaction">Complete Transaction</string>
+    <string name="followerLogo">Search Users</string>
+    <string name="titleSearchUsers">Search/Follow Users</string>
+    <string name="followedUsers">Followed Users</string>
+    <string name="addWallet">Add Wallet</string>
+    <string name="titleQRCode">Scan Wallet QR Code</string>
+    <string name="alignCamera">Align Your Camera to the QR Code</string>
+    <string name="hintManualKey">Type in Manual Key</string>
+    <string name="saveWallet">Save Wallet</string>
+    <string name="label_default_text">Default</string>
+
+    <string-array name="walletArray">
+        <item>Select A Wallet</item>
+        <item>KeepKey</item>
+        <item>Nano Ledge S</item>
+        <item>Coinbase</item>
+        <item>MyEtherWallet</item>
+        <item>Jaxx</item>
+        <item>Electrum</item>
+        <item>Exodus</item>
+        <item>Mycelium</item>
+    </string-array>
+    <string-array name="userArray">
+        <item>Select A User</item>
+        <item>Bob#2412</item>
+        <item>Bill#4214</item>
+        <item>TestUser#42</item>
+        <item>DefaultUser#5142</item>
+        <item>CryptoMaster#4124</item>
+        <item>BitCoinUser#5551</item>
+        <item>newAccount#886</item>
+        <item>Testing#2152</item>
+    </string-array>
+
+    <string name="action_refresh">Refresh Chart</string>
+
+    <string name="title_add_remove_stock">Add or Remove Stocks</string>
+    <string name="action_setings_stock_add">Add a stock</string>
+    <string name="stock_deleted_msg">Stock %1$s deleted.</string>
+
+    <string name="empty_stocks_msg">Please, press add button to add stock symbol.</string>
+    <string name="candle_stick_chart_url">file:///android_asset/CandleStickChart.html</string>
+    <string name="title_activity_addRemoveStockActivity">Add or Remove Stocks</string>
+</resources>

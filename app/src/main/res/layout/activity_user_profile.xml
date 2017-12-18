@@ -1,0 +1,133 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:gravity="center_horizontal"
+              android:orientation="vertical"
+              android:paddingBottom="16dp"
+              android:paddingLeft="16dp"
+              android:paddingRight="16dp"
+              android:paddingTop="16dp"
+              tools:context="roberttaylor.cproject.MainActivity">
+
+    <!--<RelativeLayout-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent"-->
+        <!--android:padding="25dp">-->
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/updateProfileImage"
+            android:layout_width="85dp"
+            android:layout_height="85dp"
+
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/default_profile_pic"
+            />
+
+    <EditText
+        android:id="@+id/updateUserName"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/profileName"
+        android:layout_alignBottom="@+id/profileName"
+        android:layout_alignLeft="@+id/updateCurrencySelection"
+        android:layout_alignStart="@+id/updateCurrencySelection"/>
+
+
+    <EditText
+        android:id="@+id/updateLocation"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/profileLocation"
+        android:layout_alignBottom="@+id/profileLocation"
+        android:layout_alignLeft="@+id/updateUserName"
+        android:layout_alignStart="@+id/updateUserName"/>
+
+    <EditText
+        android:id="@+id/updateCurrencySelection"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/profileCurrency"
+        android:layout_alignBottom="@+id/profileCurrency"
+        android:layout_toEndOf="@+id/profilePublic"
+        android:layout_toRightOf="@+id/profilePublic"/>
+
+
+    <Button
+        android:id="@+id/updateUserProfile"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/profilePublicSwitch"
+        android:layout_marginTop="30dp"
+        android:background="@android:color/black"
+        android:text="@string/updateUserProfile"
+        android:textColor="@android:color/white"
+        android:textStyle="bold"/>
+
+        <TextView
+            android:id="@+id/updateAddImage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/updateProfileImage"
+            android:layout_centerHorizontal="true"
+            android:text="@string/addImage"
+            android:textStyle="italic"/>
+
+    <TextView
+        android:id="@+id/profileName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/updateAddImage"
+        android:layout_marginLeft="21dp"
+        android:layout_marginStart="21dp"
+        android:layout_marginTop="18dp"
+        android:text="@string/profileName"/>
+
+    <TextView
+        android:id="@+id/profileLocation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/profileName"
+        android:layout_alignStart="@+id/profileName"
+        android:layout_below="@+id/updateUserName"
+        android:layout_marginTop="42dp"
+        android:text="@string/profileLocation"/>
+
+    <TextView
+        android:id="@+id/profileCurrency"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/profileLocation"
+        android:layout_alignStart="@+id/profileLocation"
+        android:layout_below="@+id/updateLocation"
+        android:layout_marginTop="39dp"
+        android:text="@string/profileCurrency"/>
+
+    <TextView
+        android:id="@+id/profilePublic"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/profileCurrency"
+        android:layout_alignStart="@+id/profileCurrency"
+        android:layout_alignTop="@+id/profilePublicSwitch"
+        android:text="@string/profilePublic"/>
+
+    <android.support.v7.widget.SwitchCompat
+        android:id="@+id/profilePublicSwitch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/updateCurrencySelection"
+        android:layout_marginTop="40dp"
+        android:layout_toEndOf="@+id/updateCurrencySelection"
+        android:layout_toRightOf="@+id/updateCurrencySelection"
+        android:checked="false"
+        android:theme="@style/alertSwitch"/>
+
+
+    <!--</RelativeLayout>-->
+
+</RelativeLayout>

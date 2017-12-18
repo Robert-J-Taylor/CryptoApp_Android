@@ -1,0 +1,85 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:gravity="center_horizontal"
+              android:orientation="vertical"
+              android:paddingBottom="16dp"
+              android:paddingLeft="16dp"
+              android:paddingRight="16dp"
+              android:paddingTop="16dp"
+              tools:context="roberttaylor.cproject.MainActivity">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="25dp">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:layout_centerHorizontal="true"
+            android:id="@+id/profileImage"
+            android:layout_width="85dp"
+            android:layout_height="85dp"
+            android:src="@drawable/default_profile_pic"
+            />
+
+        <EditText
+            android:id="@+id/userName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/addImage"
+            android:hint="@string/hintUserName"/>
+
+        <EditText
+            android:id="@+id/password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/userName"
+            android:layout_marginTop="15dp"
+            android:hint="@string/hintPassword"/>
+        <EditText
+            android:id="@+id/confirmPassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/password"
+            android:layout_marginTop="15dp"
+            android:hint="@string/hintConfirmPassword"/>
+        <EditText
+            android:id="@+id/location"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/confirmPassword"
+            android:layout_marginTop="15dp"
+            android:hint="@string/hintLocation"/>
+        <EditText
+            android:id="@+id/currencySelection"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/location"
+            android:layout_marginTop="15dp"
+            android:hint="@string/hintCurrencySelection"/>
+
+
+        <Button
+            android:id="@+id/saveUserProfile"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/currencySelection"
+            android:background="@android:color/black"
+            android:text="@string/saveUserProfile"
+            android:textColor="@android:color/white"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:id="@+id/addImage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/addImage"
+            android:textStyle="italic"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/profileImage"/>
+
+
+    </RelativeLayout>
+</LinearLayout>
