@@ -59,7 +59,7 @@
     <string name="volumeLTC">Volume 500 Thousand</string>
     <string name="listCoinLTCnew">LTC</string>
     <string name="addCoin">Add Coin</string>
-    <string name="coinListTitle">Coin List</string>
+    <string name="coinListTitle">Koin</string>
     <string name="alertSettings">Alerts</string>
     <string name="payTransferSettings">Payment / Transfer Coins</string>
     <string name="updateProfileTitle">Update Profile</string>
@@ -71,7 +71,7 @@
     <string name="titleExchanges">Select Your Exchanges</string>
     <string name="titleSignUp">Sign Up</string>
     <string name="titleUserAgreement">User Agreement</string>
-    <string name="titleViewCoins">Coin List</string>
+    <string name="titleViewCoins">Koin</string>
     <string name="titleSettings">Settings</string>
     <string name="titleAlerts">Select Your Alerts</string>
     <string name="userWalletsTitle">Scan Wallet QR Code</string>
@@ -154,4 +154,7 @@
     <string name="empty_stocks_msg">Please, press add button to add stock symbol.</string>
     <string name="candle_stick_chart_url">file:///android_asset/CandleStickChart.html</string>
     <string name="title_activity_addRemoveStockActivity">Add or Remove Stocks</string>
+    <string name="action_delete_item">Coin Deleted!</string>
+    <string name="action_undo">UNDO?</string>
+    <string name="walletValueTitle">Wallet Value</string>
 </resources>

@@ -1,31 +1,358 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout
+<RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="roberttaylor.cproject.Portfolio">
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:background="#5c5c5c"
+    tools:context="roberttaylor.cproject.View.Portfolio"
+    tools:layout_editor_absoluteY="81dp">
 
     <TextView
+        android:id="@+id/priceLabel"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/label_default_text"
-        android:id="@+id/priceLabel"
         android:textSize="45sp"
-        android:textStyle="bold"
-        android:layout_centerVertical="true"
-        android:layout_centerHorizontal="true"/>
+        android:textStyle="bold"/>
 
     <Button
         android:id="@+id/findPriceButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="340dp"
-        android:layout_marginTop="62dp"
         android:text="Click Test"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/priceLabel"/>
-</android.support.constraint.ConstraintLayout>
+       />
+
+    <TextView
+        android:id="@+id/coinPortfolioTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/findPriceButton"
+        android:text="CoinTitle"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="80dp"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        />
+    <TextView
+        android:id="@+id/coinPortfolioEqualsSign"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/coinPortfolioTitle"
+        android:layout_toEndOf="@+id/coinPortfolioTitle"
+        android:text="="
+        android:layout_alignBottom="@id/coinPortfolioTitle"
+        android:layout_marginTop="80dp"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        />
+    <TextView
+        android:id="@+id/portfolioCoinValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/coinPortfolioEqualsSign"
+        android:layout_toEndOf="@+id/coinPortfolioEqualsSign"
+        android:text="23452"
+        android:layout_marginLeft="5dp"
+        android:layout_alignBottom="@id/coinPortfolioTitle"
+        android:layout_marginTop="80dp"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        />
+    <TextView
+        android:id="@+id/coinPortfolioValueFluctuation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:text="1930"
+        android:paddingRight="20dp"
+        android:layout_marginRight="20dp"
+        android:paddingLeft="20dp"
+        android:background="#FF0000"
+        android:layout_alignBottom="@id/coinPortfolioTitle"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        android:layout_alignParentRight="true"/>
+    <TextView
+        android:id="@+id/portfolioWalletValueTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:textSize="20sp"
+        android:text="Wallet Value"
+        android:layout_alignLeft="@id/coinPortfolioTitle"
+        android:layout_below="@id/coinPortfolioTitle"
+        />
+    <TextView
+        android:id="@+id/portfolioWalletValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:text="123523"
+        android:layout_alignLeft="@id/portfolioWalletValueTxt"
+        android:layout_below="@id/portfolioWalletValueTxt"
+        />
+    <TextView
+        android:id="@+id/portfolioVolumeTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:textSize="20sp"
+        android:layout_marginRight="50dp"
+        android:text="Volume"
+        android:layout_alignBottom="@id/portfolioWalletValueTxt"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginEnd= "50dp"/>
+    <TextView
+        android:id="@+id/portfolioVolume"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/portfolioVolumeTxt"
+        android:layout_alignLeft="@id/portfolioVolumeTxt"
+        android:textSize="20sp"
+        android:text="23432"
+       />
+
+    <TextView
+        android:id="@+id/portfolioCurrentAlertsTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:textSize="20sp"
+        android:textColor="#e9843d"
+       android:layout_below="@id/portfolioWalletValue"
+        android:layout_alignLeft="@id/portfolioWalletValue"
+        android:text="Current Alerts  +"
+        android:layout_alignStart="@id/portfolioWalletValue"/>
+    <TextView
+        android:id="@+id/portfolioCurrentAlertsThresholdTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:layout_below="@id/portfolioCurrentAlertsTxt"
+        android:layout_alignLeft="@id/portfolioCurrentAlertsTxt"
+        android:text="Threshold"
+        android:layout_alignStart="@id/portfolioCurrentAlertsTxt"/>
+    <TextView
+        android:id="@+id/portfolioThresholdValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:layout_below="@id/portfolioCurrentAlertsThresholdTxt"
+        android:layout_alignLeft="@id/portfolioCurrentAlertsThresholdTxt"
+        android:text="4521"
+        android:layout_alignStart="@id/portfolioCurrentAlertsThresholdTxt"/>
+    <TextView
+        android:id="@+id/portfolioCurrentAlertsVolumeTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:layout_alignBottom="@id/portfolioCurrentAlertsThresholdTxt"
+        android:text="Volume"
+        android:layout_marginLeft="50dp"
+        android:layout_toRightOf="@id/portfolioCurrentAlertsThresholdTxt"
+        android:layout_toEndOf="@id/portfolioCurrentAlertsThresholdTxt"/>
+    <TextView
+        android:id="@+id/portfolioVolumeValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:layout_alignLeft="@+id/portfolioCurrentAlertsVolumeTxt"
+        android:text="15590"
+        android:layout_below="@+id/portfolioCurrentAlertsVolumeTxt"
+        android:layout_alignStart="@+id/portfolioCurrentAlertsVolumeTxt"/>
+    <TextView
+        android:id="@+id/portfolioCurrentAlertsLimitTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:layout_alignBottom="@id/portfolioCurrentAlertsVolumeTxt"
+        android:text="Limit"
+        android:layout_marginLeft="50dp"
+        android:layout_toRightOf="@id/portfolioCurrentAlertsVolumeTxt"
+        android:layout_toEndOf="@id/portfolioCurrentAlertsVolumeTxt"/>
+    <TextView
+        android:id="@+id/portfolioLimitValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:layout_below="@id/portfolioCurrentAlertsLimitTxt"
+        android:layout_alignLeft="@id/portfolioCurrentAlertsLimitTxt"
+        android:text="42421"
+        android:layout_alignStart="@id/portfolioCurrentAlertsLimitTxt"/>
+
+    <TextView
+        android:id="@+id/portfolioMarketStatsTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:layout_marginTop="10dp"
+        android:layout_below="@id/portfolioThresholdValue"
+        android:layout_alignLeft="@id/portfolioThresholdValue"
+        android:text="Market Stats"
+        android:layout_alignStart="@id/portfolioThresholdValue"/>
+    <TextView
+        android:id="@+id/portfolioMarketStats"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:layout_below="@id/portfolioMarketStatsTxt"
+        android:layout_alignLeft="@id/portfolioMarketStatsTxt"
+        android:text="Sell"
+        android:layout_alignStart="@id/portfolioMarketStatsTxt"/>
+
+    <TextView
+        android:id="@+id/portfolioRiskTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:layout_marginTop="10dp"
+        android:layout_below="@id/portfolioVolumeValue"
+        android:layout_alignLeft="@id/portfolioVolumeValue"
+        android:text="Risk"
+        android:layout_alignStart="@id/portfolioVolumeValue"/>
+    <TextView
+        android:id="@+id/portfolioRisk"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:layout_below="@id/portfolioRiskTxt"
+        android:layout_alignLeft="@id/portfolioRiskTxt"
+        android:text="High"
+        android:layout_alignStart="@id/portfolioRiskTxt"/>
+    <TextView
+        android:id="@+id/portfolioSelloffTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:layout_marginTop="10dp"
+        android:layout_below="@id/portfolioLimitValue"
+        android:layout_alignLeft="@id/portfolioLimitValue"
+        android:text="Selloff"
+        android:layout_alignStart="@id/portfolioLimitValue"/>
+    <TextView
+        android:id="@+id/portfolioSelloff"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:layout_below="@id/portfolioSelloffTxt"
+        android:layout_alignLeft="@id/portfolioSelloffTxt"
+        android:text="High"
+        android:layout_alignStart="@id/portfolioSelloffTxt"/>
+
+
+
+
+
+
+
+
+    <TextView
+        android:id="@+id/coinVolume"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="192dp"
+        android:layout_marginTop="60dp"
+        android:text="1000"
+        android:textSize="40sp"
+        android:textStyle="bold"
+        />
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginBottom="2dp"
+        card_view:cardBackgroundColor="#aeacac"
+        android:id="@+id/portfolioCard1"
+        android:layout_below="@id/portfolioMarketStats">
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/lastExecutedOrderTxt1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Last Executed Order 12/17"
+            android:textSize="20sp"/>
+        <TextView
+            android:id="@+id/lastExecutedOrderContent1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/lastExecutedOrderTxt1"
+            android:text="Your order proccessed for 19 coin share(s).
+Your current wallet was debited $566.55"
+            android:textSize="15sp"/>
+
+    </RelativeLayout>
+
+    </android.support.v7.widget.CardView>
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginBottom="2dp"
+        android:id="@+id/portfolioCard2"
+        android:layout_below="@id/portfolioCard1"
+        android:layout_marginStart="10dp"
+        card_view:cardBackgroundColor="#aeacac"
+        android:layout_marginRight="10dp"
+        android:layout_marginEnd="10dp">
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/lastExecutedOrderTxt2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Last Executed Order 12/17"
+                android:textSize="20sp"/>
+            <TextView
+                android:id="@+id/lastExecutedOrderContent2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/lastExecutedOrderTxt2"
+                android:text="Your order proccessed for 19 coin share(s).
+Your current wallet was debited $566.55"
+                android:textSize="15sp"/>
+
+        </RelativeLayout>
+
+    </android.support.v7.widget.CardView>
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_below="@+id/portfolioCard2"
+        android:layout_marginStart="10dp"
+        card_view:cardBackgroundColor="#aeacac"
+        android:layout_marginRight="10dp"
+        android:layout_marginEnd="10dp">
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/lastExecutedOrderTxt3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Last Executed Order 12/17"
+                android:textSize="20sp"/>
+            <TextView
+                android:id="@+id/lastExecutedOrderContent3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/lastExecutedOrderTxt3"
+                android:text="Your order proccessed for 19 coin share(s).
+Your current wallet was debited $566.55"
+                android:textSize="15sp"/>
+
+        </RelativeLayout>
+
+    </android.support.v7.widget.CardView>
+</RelativeLayout>

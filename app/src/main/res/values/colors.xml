@@ -3,10 +3,15 @@
     <color name="colorPrimary">#3F51B5</color>
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#00f8fc</color>
+
     <color name="actionbar_background">#9aceff</color>
 
     <color name="translucent">#80000000</color>
     <color name="transparent">#00000000</color>
+
+    <color name="RED">#FF0000</color>
+    <color name ="BLUE">#0000FF</color>
+    <color name="GREEN">#00FF00</color>
 
     <!-- Imported From Candlestick Project-->
     <color name="blue_extra_light">#c8eefc</color>  <!-- (not in handbook) -->

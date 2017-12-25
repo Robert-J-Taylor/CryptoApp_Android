@@ -1,4 +1,4 @@
-package roberttaylor.cproject;
+package roberttaylor.cproject.View;
 
 import android.content.Intent;
 import android.preference.PreferenceActivity;
@@ -17,20 +17,42 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import cz.msebera.android.httpclient.entity.mime.Header;
+import roberttaylor.cproject.R;
 
 public class Portfolio extends AppCompatActivity {
-    // Constants:
-    // TODO: Create the base URL
+
+
+    private static final String EXTRA_COIN_NAME = "EXTRA_COIN_NAME";
+    private static final String EXTRA_VOLUME = "EXTRA_VOLUME";
     private final String BASE_URL = "https://apiv2.bitcoinaverage.com/indices/global/ticker/BTCAUD";
     //private final String BASE_URL = "http://wtfdnsftw.freeddns.org:5000/candlestick?exchange=binance&market=NEOBTC&start_date=2017-11-19%2020:00:00.000";
     private TextView mPriceTextView;
     // Member Variables:
     private Button buttonTest;
-
+    private TextView coinTitle;
+    private TextView volumeDisplay;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_portfolio);
+         /*I wouldn't normally pass all this Data via Intent, so understand that this is just a quick
+        implementation to get things working for the Demo. I'd normally pass just a Unique id as an
+        extra, and then retrieve the appropriate Data from a Service.*/
+        Intent i = getIntent();
+        String coinName = i.getStringExtra(EXTRA_COIN_NAME);
+        int volume = i.getIntExtra(EXTRA_VOLUME,0);
+
+
+        coinTitle = findViewById(R.id.coinPortfolioTitle);
+        coinTitle.setText(coinName);
+
+        volumeDisplay = findViewById(R.id.coinVolume);
+       // volumeDisplay.setText(volume);
+        volumeDisplay.setText(String.valueOf(volume));
+
+
+
+
         //mPriceTextView= findViewById(R.id.priceLabel);
         buttonTest = (Button) findViewById(R.id.findPriceButton);
         Intent intent= getIntent();
@@ -38,7 +60,9 @@ public class Portfolio extends AppCompatActivity {
         String txt_put =intent.getStringExtra("Price");
         mPriceTextView.setText(txt_put);
 
-
+//        if(extras != null){
+//            coinTitle.setText(extras.getString("coinName"));
+//        }
         buttonTest.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

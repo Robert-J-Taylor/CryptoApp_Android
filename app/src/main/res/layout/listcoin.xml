@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/root_list_item"
+    android:background="#2385ef">
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/cardviewCoin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        card_view:cardBackgroundColor="#979595"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginBottom="5dp">
+
+        <!--<LinearLayout-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="match_parent"-->
+            <!--android:paddingLeft="20dp"-->
+            <!--android:paddingStart="20dp"-->
+            <!--android:paddingEnd="20dp"-->
+            <!--android:orientation="vertical">-->
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/coinTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Title"
+                android:paddingLeft="10dp"
+                android:paddingStart="10dp"
+                android:textSize="25sp"
+                android:textStyle="bold"/>
+            <TextView
+                android:id="@+id/coinValue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="16220"
+                android:layout_toRightOf="@+id/coinEquals"
+                android:paddingLeft="5dp"
+                android:paddingStart="5dp"
+                android:textSize="25sp"
+                android:textStyle="bold"
+                tools:ignore="RtlHardcoded,RtlSymmetry"/>
+            <TextView
+                android:id="@+id/coinPercentChange"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="+1221.22"
+                android:layout_alignParentRight="true"
+
+                android:paddingLeft="5dp"
+                android:paddingStart="5dp"
+                android:paddingRight="5dp"
+                android:paddingEnd="5dp"
+                android:background="#27af84"
+                android:textSize="25sp"
+                android:textStyle="bold"
+                tools:ignore="RtlHardcoded"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/coinEquals"
+                android:paddingLeft="5dp"
+                android:paddingStart="5dp"
+                android:text="="
+                android:textSize="25sp"
+                android:layout_toRightOf="@+id/coinTitle"
+                tools:ignore="HardcodedText,RtlHardcoded,RtlSymmetry"/>
+            <TextView
+                android:id="@+id/WalletValueTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/coinTitle"
+                android:paddingTop="5dp"
+                android:paddingStart="10dp"
+                android:paddingLeft="10dp"
+                android:text="@string/walletValueTitle"
+                tools:ignore="RtlSymmetry"/>
+
+            <TextView
+                android:id="@+id/walletValue"
+                android:paddingStart="10dp"
+                android:paddingLeft="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/WalletValueTitle"
+                android:text="1000"
+                tools:ignore="RtlSymmetry"/>
+            <TextView
+            android:id="@+id/volumeNumber"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_below="@+id/coinTitle"
+            android:paddingTop="5dp"
+            android:paddingEnd="10dp"
+            android:paddingStart="10dp"
+            android:paddingRight="10dp"
+            android:text="Volume"
+            android:layout_alignParentRight="true"/>
+
+            <TextView
+                android:id="@+id/volume"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/volumeNumber"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"
+                android:paddingEnd="10dp"
+                android:paddingStart="10dp"
+                android:paddingRight="10dp"
+                android:paddingLeft="10dp"
+
+                android:text="11020"/>
+
+            <ImageView
+                android:id="@+id/imageView3"
+                android:layout_width="140dp"
+                android:layout_height="50dp"
+                android:layout_below="@+id/coinValue"
+                android:layout_centerHorizontal="true"
+                card_view:srcCompat="@drawable/graph"/>
+        </RelativeLayout>
+
+
+
+
+
+
+        <!--</LinearLayout>-->
+    </android.support.v7.widget.CardView>
+</RelativeLayout>

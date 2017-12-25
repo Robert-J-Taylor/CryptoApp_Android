@@ -47,7 +47,7 @@
             android:label="@string/titleUserAgreement">
         </activity>
         <activity
-            android:name=".ViewCoinList"
+            android:name=".View.ViewCoinList"
             android:label="@string/titleViewCoins"
             android:theme="@style/CoinListViewTheme">
         </activity>
@@ -84,7 +84,7 @@
             android:name=".QRCode"
             android:label="@string/titleQRCode">
         </activity>
-        <activity android:name=".Portfolio">
+        <activity android:name=".View.Portfolio">
         </activity>
     </application>
 

@@ -7,6 +7,8 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.Spinner;
 
+import roberttaylor.cproject.View.ViewCoinList;
+
 public class Payment extends AppCompatActivity {
     private Spinner walletSpinner;
     private Spinner userSpinner;
