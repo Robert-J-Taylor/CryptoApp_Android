@@ -8,7 +8,7 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppMaterialTheme">
-        <activity android:name=".MainActivity">
+        <activity android:name=".View.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
 
@@ -27,23 +27,23 @@
             android:parentActivityName=".ChartActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="MainActivity" />
+                android:value=".View.MainActivity" />
         </activity>
         <activity
-            android:name=".Register"
+            android:name=".View.Register"
             android:label="@string/titleSignUp">
         </activity>
         <activity
-            android:name=".Exchanges"
+            android:name=".View.Exchanges"
             android:label="@string/titleExchanges"
             android:theme="@style/AppMaterialTheme">
         </activity>
         <activity
-            android:name=".APIKeySettings"
+            android:name=".View.APIKeySettings"
             android:label="@string/titleAPIKeySettings">
         </activity>
         <activity
-            android:name=".UserAgreement"
+            android:name=".View.UserAgreement"
             android:label="@string/titleUserAgreement">
         </activity>
         <activity
@@ -52,18 +52,18 @@
             android:theme="@style/CoinListViewTheme">
         </activity>
         <activity
-            android:name=".Settings"
+            android:name=".View.Settings"
             android:label="@string/titleSettings">
         </activity>
         <activity
-            android:name=".UserProfile"
+            android:name=".View.UserProfile"
             android:label="@string/titleUpdateProfile">
         </activity>
         <activity
-            android:name=".Alerts"
+            android:name=".View.Alerts"
             android:label="@string/titleAlerts">
         </activity>
-        <activity android:name=".Notifications">
+        <activity android:name=".View.Notifications">
         </activity>
         <activity
             android:name=".Payment"
@@ -71,17 +71,17 @@
             android:theme="@style/AppMaterialTheme">
         </activity>
         <activity
-            android:name=".SearchUsers"
+            android:name=".View.SearchUsers"
             android:label="@string/titleSearchUsers"
             android:theme="@style/AppMaterialTheme">
         </activity>
         <activity
-            android:name=".FollowedUsers"
+            android:name=".View.FollowedUsers"
             android:label="@string/followedUsers"
             android:theme="@style/AppMaterialTheme">
         </activity>
         <activity
-            android:name=".QRCode"
+            android:name=".View.QRCode"
             android:label="@string/titleQRCode">
         </activity>
         <activity android:name=".View.Portfolio">

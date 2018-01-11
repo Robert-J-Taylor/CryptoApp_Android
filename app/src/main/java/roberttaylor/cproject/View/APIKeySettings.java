@@ -1,14 +1,13 @@
-package roberttaylor.cproject;
+package roberttaylor.cproject.View;
 
 import android.content.Intent;
-import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-import java.util.List;
+import roberttaylor.cproject.R;
 
 public class APIKeySettings extends AppCompatActivity {
     private Button saveAPISettings;

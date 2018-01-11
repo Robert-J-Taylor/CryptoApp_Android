@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.loopj.android.http.AsyncHttpClient;
@@ -17,6 +18,7 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import cz.msebera.android.httpclient.entity.mime.Header;
+import roberttaylor.cproject.ChartActivity;
 import roberttaylor.cproject.R;
 
 public class Portfolio extends AppCompatActivity {
@@ -24,6 +26,9 @@ public class Portfolio extends AppCompatActivity {
 
     private static final String EXTRA_COIN_NAME = "EXTRA_COIN_NAME";
     private static final String EXTRA_VOLUME = "EXTRA_VOLUME";
+    private static final String EXTRA_COIN_VALUE ="EXTRA_COIN_VALUE";
+    private static final String EXTRA_VALUE_FLUCTUATION ="EXTRA_VALUE_FLUCTUATION";
+    private static final String EXTRA_WALLET_VALUE ="EXTRA_WALLET_VALUE";
     private final String BASE_URL = "https://apiv2.bitcoinaverage.com/indices/global/ticker/BTCAUD";
     //private final String BASE_URL = "http://wtfdnsftw.freeddns.org:5000/candlestick?exchange=binance&market=NEOBTC&start_date=2017-11-19%2020:00:00.000";
     private TextView mPriceTextView;
@@ -31,6 +36,10 @@ public class Portfolio extends AppCompatActivity {
     private Button buttonTest;
     private TextView coinTitle;
     private TextView volumeDisplay;
+    private TextView coinValueDisplay;
+    private TextView valueFluctuation;
+    private ImageView viewGraph;
+    private TextView walletValueDisplay;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -41,20 +50,35 @@ public class Portfolio extends AppCompatActivity {
         Intent i = getIntent();
         String coinName = i.getStringExtra(EXTRA_COIN_NAME);
         int volume = i.getIntExtra(EXTRA_VOLUME,0);
+        int coinValue = i.getIntExtra(EXTRA_COIN_VALUE,0);
+        int coinValueFluctuation = i.getIntExtra(EXTRA_VALUE_FLUCTUATION,0);
+        int walletValue = i.getIntExtra(EXTRA_WALLET_VALUE,0);
 
 
+        viewGraph=findViewById(R.id.viewGraph);
+        viewGraph.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(Portfolio.this, ChartActivity.class));
+            }
+        });
         coinTitle = findViewById(R.id.coinPortfolioTitle);
-        coinTitle.setText(coinName);
+        volumeDisplay = findViewById(R.id.portfolioVolume);
+        coinValueDisplay = findViewById(R.id.portfolioCoinValue);
+        valueFluctuation = findViewById(R.id.coinPortfolioValueFluctuation);
+        walletValueDisplay = findViewById(R.id.portfolioWalletValue);
 
-        volumeDisplay = findViewById(R.id.coinVolume);
-       // volumeDisplay.setText(volume);
+        coinTitle.setText(coinName);
         volumeDisplay.setText(String.valueOf(volume));
+        coinValueDisplay.setText(String.valueOf(coinValue));
+        valueFluctuation.setText(String.valueOf(coinValueFluctuation));
+        walletValueDisplay.setText(String.valueOf(walletValue));
 
 
 
 
         //mPriceTextView= findViewById(R.id.priceLabel);
-        buttonTest = (Button) findViewById(R.id.findPriceButton);
+        //buttonTest = (Button) findViewById(R.id.findPriceButton);
         Intent intent= getIntent();
         mPriceTextView =(TextView)findViewById(R.id.priceLabel);
         String txt_put =intent.getStringExtra("Price");
@@ -63,15 +87,15 @@ public class Portfolio extends AppCompatActivity {
 //        if(extras != null){
 //            coinTitle.setText(extras.getString("coinName"));
 //        }
-        buttonTest.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Log.d("Bitcoin", "" + v);
-                String finalUrl = BASE_URL;
-                Log.d("Bitcoin", "Final url is: " + finalUrl);
-                letsDoSomeNetworking(finalUrl);
-            }
-        });
+//        buttonTest.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                Log.d("Bitcoin", "" + v);
+//                String finalUrl = BASE_URL;
+//                Log.d("Bitcoin", "Final url is: " + finalUrl);
+//                letsDoSomeNetworking(finalUrl);
+//            }
+//        });
     }
     private void letsDoSomeNetworking(String url) {
 

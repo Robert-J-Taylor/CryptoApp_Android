@@ -1,4 +1,4 @@
-package roberttaylor.cproject;
+package roberttaylor.cproject.View;
 
 import android.content.Intent;
 import android.content.res.Configuration;
@@ -6,6 +6,7 @@ import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 
+import roberttaylor.cproject.R;
 import yalantis.com.sidemenu.util.ViewAnimator;
 
 import android.content.res.Configuration;

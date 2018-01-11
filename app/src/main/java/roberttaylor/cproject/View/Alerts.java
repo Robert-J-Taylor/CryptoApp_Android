@@ -1,4 +1,4 @@
-package roberttaylor.cproject;
+package roberttaylor.cproject.View;
 
 import android.content.Intent;
 import android.support.design.widget.FloatingActionButton;
@@ -6,9 +6,8 @@ import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.Button;
-import android.widget.Switch;
-import android.widget.Toast;
+
+import roberttaylor.cproject.R;
 
 public class Alerts extends AppCompatActivity {
     @Override

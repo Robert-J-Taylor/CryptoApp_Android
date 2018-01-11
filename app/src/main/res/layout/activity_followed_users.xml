@@ -5,6 +5,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="roberttaylor.cproject.FollowedUsers">
+    tools:context="roberttaylor.cproject.View.FollowedUsers">
 
 </android.support.constraint.ConstraintLayout>

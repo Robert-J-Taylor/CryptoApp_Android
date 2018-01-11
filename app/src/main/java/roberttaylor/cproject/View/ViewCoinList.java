@@ -16,36 +16,24 @@ import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
 import android.support.v7.widget.helper.ItemTouchHelper;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.TextView;
-
-import com.loopj.android.http.AsyncHttpClient;
-import com.loopj.android.http.JsonHttpResponseHandler;
-
-import org.json.JSONException;
-import org.json.JSONObject;
 
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
-import roberttaylor.cproject.ChartActivity;
 import roberttaylor.cproject.ContentFragment;
 import roberttaylor.cproject.Data.CoinList;
 import roberttaylor.cproject.Data.FakeDataSource;
-import roberttaylor.cproject.FollowedUsers;
 import roberttaylor.cproject.Logic.Controller;
 import roberttaylor.cproject.Payment;
 import roberttaylor.cproject.R;
-import roberttaylor.cproject.SearchUsers;
-import roberttaylor.cproject.Settings;
 import yalantis.com.sidemenu.interfaces.Resourceble;
 import yalantis.com.sidemenu.interfaces.ScreenShotable;
 import yalantis.com.sidemenu.model.SlideMenuItem;
@@ -70,10 +58,10 @@ public class ViewCoinList extends AppCompatActivity implements ViewAnimator.View
     private List<SlideMenuItem> list = new ArrayList<>();
     private ContentFragment contentFragment;
     private ViewAnimator viewAnimator;
-    private Button addCoin;
+
     private TextView priceLabel;
-    private Button viewSampleGraph;
-    private final String BASE_URL = "https://apiv2.bitcoinaverage.com/indices/global/ticker/BTCAUD";
+
+    //private final String BASE_URL = "https://apiv2.bitcoinaverage.com/indices/global/ticker/BTCAUD";
     //private final String BASE_URL = "http://wtfdnsftw.freeddns.org:5000/candlestick?exchange=binance&market=NEOBTC&start_date=2017-11-19%2020:00:00.000";
     private LinearLayout linearLayout;
     @Override
@@ -98,23 +86,6 @@ public class ViewCoinList extends AppCompatActivity implements ViewAnimator.View
                 drawerLayout.closeDrawers();
             }
         });
-        addCoin= findViewById(R.id.addCoinButton);
-        viewSampleGraph = findViewById(R.id.viewSampleGraphButton);
-        viewSampleGraph.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startActivity(new Intent(ViewCoinList.this, ChartActivity.class));
-            }
-        });
-        addCoin.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-
-                        Log.d("Bitcoin", "Url is: " + BASE_URL);
-                        letsDoSomeNetworking(BASE_URL);
-            }
-        });
-
 
         setActionBar();
         createMenuList();
@@ -249,48 +220,51 @@ public class ViewCoinList extends AppCompatActivity implements ViewAnimator.View
     public void addViewToContainer(View view) {
         linearLayout.addView(view);
     }
-    private void letsDoSomeNetworking(String url) {
-
-        AsyncHttpClient client = new AsyncHttpClient();
-        client.get(url, new JsonHttpResponseHandler() {
-
-            @Override
-            public void onSuccess(int statusCode, cz.msebera.android.httpclient.Header[] headers, JSONObject response) {
-                // called when response HTTP status is "200 OK"
-                Log.d("Bitcoin", "JSON: " + response.toString());
-                try{
-                    String price = response.getString("last");
-                   // JSONObject jsonObject = response.getJSONObject(0);
-                   // String price = jsonObject.getString("time");
-                    Intent intent = new Intent(ViewCoinList.this,Portfolio.class);
-                    intent.putExtra("Price", price);
-                    startActivity(intent);
-
-                }catch(JSONException e){
-                    e.printStackTrace();
-                }
-
-            }
-
-            @Override
-            public void onFailure(int statusCode, cz.msebera.android.httpclient.Header[] headers, Throwable e, JSONObject response) {
-                // called when response HTTP status is "4XX" (eg. 401, 403, 404)
-                Log.d("Bitcoin", "Request fail! Status code: " + statusCode);
-                Log.d("Bitcoin", "Fail response: " + response);
-                Log.e("ERROR", e.toString());
-
-            }
-        });
-
-
-
-    }
+//    private void letsDoSomeNetworking(String url) {
+//
+//        AsyncHttpClient client = new AsyncHttpClient();
+//        client.get(url, new JsonHttpResponseHandler() {
+//
+//            @Override
+//            public void onSuccess(int statusCode, cz.msebera.android.httpclient.Header[] headers, JSONObject response) {
+//                // called when response HTTP status is "200 OK"
+//                Log.d("Bitcoin", "JSON: " + response.toString());
+//                try{
+//                    String price = response.getString("last");
+//                   // JSONObject jsonObject = response.getJSONObject(0);
+//                   // String price = jsonObject.getString("time");
+//                    Intent intent = new Intent(ViewCoinList.this,Portfolio.class);
+//                    intent.putExtra("Price", price);
+//                    startActivity(intent);
+//
+//                }catch(JSONException e){
+//                    e.printStackTrace();
+//                }
+//
+//            }
+//
+//            @Override
+//            public void onFailure(int statusCode, cz.msebera.android.httpclient.Header[] headers, Throwable e, JSONObject response) {
+//                // called when response HTTP status is "4XX" (eg. 401, 403, 404)
+//                Log.d("Bitcoin", "Request fail! Status code: " + statusCode);
+//                Log.d("Bitcoin", "Fail response: " + response);
+//                Log.e("ERROR", e.toString());
+//
+//            }
+//        });
+//
+//
+//
+//    }
 
     @Override
-    public void startPortfolioActivity(String coinName, int volume) {
+    public void startPortfolioActivity(String coinName, int volume,int coinValue, int walletValue, int valueFluctuation) {
                  Intent i = new Intent(this, Portfolio.class);
                  i.putExtra(EXTRA_COIN_NAME,coinName);
                  i.putExtra(EXTRA_VOLUME,volume);
+                 i.putExtra(EXTRA_COIN_VALUE,coinValue);
+                 i.putExtra(EXTRA_WALLET_VALUE,walletValue);
+                 i.putExtra(EXTRA_VALUE_FLUCTUATION,valueFluctuation);
                  startActivity(i);
     }
 
@@ -385,8 +359,8 @@ public class ViewCoinList extends AppCompatActivity implements ViewAnimator.View
             holder.volume.setText(String.valueOf(currentItem.getVolume()));
 
             holder.walletValue.setText(String.valueOf(currentItem.getWalletValue()));
-            holder.valueFluctuation.setText(String.valueOf(currentItem.getWalletValue()));
-            holder.coinValue.setText(String.valueOf(currentItem.getWalletValue()));
+            holder.valueFluctuation.setText(String.valueOf(currentItem.getCoinValue()));
+            holder.coinValue.setText(String.valueOf(currentItem.getValueFluctuation()));
 
 
         }

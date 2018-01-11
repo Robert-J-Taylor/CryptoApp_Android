@@ -1,13 +1,15 @@
-package roberttaylor.cproject;
+package roberttaylor.cproject.View;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
-public class UserProfile extends AppCompatActivity {
+import roberttaylor.cproject.R;
+
+public class SearchUsers extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_user_profile);
+        setContentView(R.layout.activity_search_users);
     }
 }

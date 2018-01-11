@@ -286,17 +286,17 @@
                     android:layout_marginBottom="64dp"
                     android:layout_marginEnd="16dp" />
 
-                <Button
-                    android:id="@+id/addCoinButton"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="@string/addCoin"/>
+                <!--<Button-->
+                    <!--android:id="@+id/addCoinButton"-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:text="@string/addCoin"/>-->
 
-                <Button
-                    android:id="@+id/viewSampleGraphButton"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="View Sample Graph"/>
+                <!--<Button-->
+                    <!--android:id="@+id/viewSampleGraphButton"-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:text="View Sample Graph"/>-->
 
 
             </LinearLayout>

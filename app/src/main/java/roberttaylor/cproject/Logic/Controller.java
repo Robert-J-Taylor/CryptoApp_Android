@@ -37,7 +37,10 @@ public class Controller {
     public void onListItemClick(CoinList selectedItem) {
         view.startPortfolioActivity(
                 selectedItem.getCoinName(),
-                selectedItem.getVolume()
+                selectedItem.getVolume(),
+                selectedItem.getCoinValue(),
+                selectedItem.getWalletValue(),
+                selectedItem.getValueFluctuation()
         );
     }
 

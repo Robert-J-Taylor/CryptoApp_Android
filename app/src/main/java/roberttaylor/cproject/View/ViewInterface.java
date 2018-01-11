@@ -10,7 +10,7 @@ import roberttaylor.cproject.Data.CoinList;
 
 public interface ViewInterface {
 
-    void startPortfolioActivity(String coinName,int volume);
+    void startPortfolioActivity(String coinName,int volume, int coinValue, int walletValue, int valueFluctuation);
 
     void setUpAdapterAndView(List<CoinList> listOfData);
 

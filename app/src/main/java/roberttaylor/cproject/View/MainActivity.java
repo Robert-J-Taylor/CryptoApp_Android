@@ -1,4 +1,4 @@
-package roberttaylor.cproject;
+package roberttaylor.cproject.View;
 
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
@@ -7,7 +7,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
-import roberttaylor.cproject.View.ViewCoinList;
+import roberttaylor.cproject.R;
 
 public class MainActivity extends AppCompatActivity {
     private Button signIn;

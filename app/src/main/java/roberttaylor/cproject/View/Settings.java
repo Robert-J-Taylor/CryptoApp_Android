@@ -1,4 +1,4 @@
-package roberttaylor.cproject;
+package roberttaylor.cproject.View;
 
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
@@ -6,9 +6,8 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
 
-import org.w3c.dom.Text;
-
-import static android.icu.lang.UCharacter.GraphemeClusterBreak.V;
+import roberttaylor.cproject.Payment;
+import roberttaylor.cproject.R;
 
 public class Settings extends AppCompatActivity {
     private TextView profile;

@@ -1,7 +1,9 @@
-package roberttaylor.cproject;
+package roberttaylor.cproject.View;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+
+import roberttaylor.cproject.R;
 
 public class FollowedUsers extends AppCompatActivity {
 
